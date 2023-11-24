@@ -39,6 +39,7 @@ const renderData = (data) => {
     const img = document.createElement("img");
     const res = await fetch(`/images/${obj.id}`);
     const blob = await res.blob();
+
     const url = URL.createObjectURL(blob);
     img.src = url;
     img.src = obj.image;
